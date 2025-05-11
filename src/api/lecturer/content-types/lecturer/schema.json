@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lecturers",
+  "info": {
+    "singularName": "lecturer",
+    "pluralName": "lecturers",
+    "displayName": "lecturer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "text"
+    },
+    "email": {
+      "type": "email"
+    },
+    "department": {
+      "type": "text"
+    },
+    "course_materials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course-material.course-material",
+      "mappedBy": "lecturer"
+    },
+    "password": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "lecturer"
+    }
+  }
+}

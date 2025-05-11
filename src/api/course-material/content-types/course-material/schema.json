@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "course_materials",
+  "info": {
+    "singularName": "course-material",
+    "pluralName": "course-materials",
+    "displayName": "course_material",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "files": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "uploadDate": {
+      "type": "date"
+    },
+    "lecturer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lecturer.lecturer",
+      "inversedBy": "course_materials"
+    }
+  }
+}

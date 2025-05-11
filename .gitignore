@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv environment files
+.env
+.env.local
+.env.*.local
+.env.example
+
+# Build output (React)
+build/
+
+
+# Strapi-specific
+.cache/
+.tmp/
+public/uploads/
+
+# OS/system files
+.DS_Store
+Thumbs.db
+
+# Editor-specific
+.vscode/
+.idea/
+*.swp
+
+# Render deploy previews
+render.yaml
