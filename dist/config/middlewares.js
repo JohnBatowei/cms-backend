@@ -10,5 +10,7 @@ exports.default = [
     'strapi::body',
     'strapi::session',
     'strapi::favicon',
+    // Move your custom middleware before 'public'
+    'global::root-redirect',
     'strapi::public',
 ];
